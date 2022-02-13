@@ -33,9 +33,9 @@ mongoose.connection.on("error", (err) => {
 });
 
 //bring in routes
-const postRoutes = require("./routes/posts");
+const userRoutes = require("./routes/user");
 //we can now use app.use instead of app.get because we are now using the middleware with express Router();
-app.use("/", postRoutes);
+app.use("/", userRoutes);
 
 const port = 8880;
 app.listen(port, () => {
