@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
+
   pinNumber: {
     type: String,
     required: true
@@ -12,7 +13,10 @@ const userSchema = new mongoose.Schema({
   phoneNumber: {
     type: String,
     required: true
-  }
+  },
+  subscriptions: [],
+
 });
+userSchema.set('toObject')
 
 module.exports = mongoose.model("User", userSchema);

@@ -13,7 +13,7 @@ exports.createUserValidator = (req, res, next) => {
   });
   //phoneNumber
   req.check("phoneNumber", "Please enter your phone number").notEmpty();
-  req.check("phoneNumber", "There must be exactly 11 characters, start with 1 then the rest of your 10 digit number").isLength({
+  req.check("phoneNumber", "There must be exactly 11 characters in your phoneNumber, start with 1 then the rest of your 10 digit number").isLength({
     min: 11,
     max: 11
   })
